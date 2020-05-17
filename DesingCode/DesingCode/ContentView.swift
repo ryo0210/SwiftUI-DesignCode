@@ -88,7 +88,7 @@ struct ContentView: View {
             
             //Text("\(self.bottomState.height / 1000)value").offset(y: -300)
             
-            BottomCardView()
+            BottomCardView(show: $showCard)
                 .offset(x: 0, y: showCard ? 360 : 1000)
                 .offset(y: bottomState.height)
                 .blur(radius: show ? 20 : 0)
@@ -145,7 +145,9 @@ struct CardView: View {
             }
             .padding(.horizontal)
             .padding(.top)
+            
             Spacer()
+            
             Image("Card1")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
@@ -179,6 +181,8 @@ struct TitleView: View {
 }
 
 struct BottomCardView: View {
+    @Binding var show: Bool
+    
     var body: some View {
         VStack(spacing: 16) {
             Rectangle()
@@ -191,6 +195,24 @@ struct BottomCardView: View {
                 .multilineTextAlignment(.leading)
                 .font(.subheadline)
                 .lineSpacing(7)
+            HStack(spacing: 20.0) {
+                RingView(color1: #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1), color2: #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1), circleWidth: 88, circleHeight: 88, percent: 78, show: $show)
+                    .animation(Animation.easeInOut.delay(0.3))
+                
+                VStack(alignment: .leading, spacing: 8.0) {
+                    Text("SwiftUI Prototype")
+                        .fontWeight(.bold)
+                    Text("12 of 12 sections completed \n10 hours spent so far")
+                    .font(.footnote)
+                    .foregroundColor(.gray)
+                    .lineSpacing(4)
+                }
+                .padding(20)
+                .background(Color.white)
+                .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 10)
+            }
+            
             Spacer()
         }
             //.padding()
