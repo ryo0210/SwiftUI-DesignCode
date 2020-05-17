@@ -17,6 +17,7 @@
 		2A217DCB2470D632006BEFB5 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A217DCA2470D632006BEFB5 /* Home.swift */; };
 		2A217DCD2470E9F3006BEFB5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A217DCC2470E9F3006BEFB5 /* HomeView.swift */; };
 		2A217DCF24713B6F006BEFB5 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A217DCE24713B6F006BEFB5 /* UpdateList.swift */; };
+		2A217DD124714106006BEFB5 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A217DD024714106006BEFB5 /* UpdateDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		2A217DCA2470D632006BEFB5 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		2A217DCC2470E9F3006BEFB5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2A217DCE24713B6F006BEFB5 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
+		2A217DD024714106006BEFB5 /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				2A217DCE24713B6F006BEFB5 /* UpdateList.swift */,
 				2A217DCA2470D632006BEFB5 /* Home.swift */,
 				2A217DBA246F8369006BEFB5 /* Assets.xcassets */,
+				2A217DD024714106006BEFB5 /* UpdateDetail.swift */,
 				2A217DBF246F8369006BEFB5 /* LaunchScreen.storyboard */,
 				2A217DC2246F8369006BEFB5 /* Info.plist */,
 				2A217DBC246F8369006BEFB5 /* Preview Content */,
@@ -161,6 +164,7 @@
 				2A217DB5246F8365006BEFB5 /* AppDelegate.swift in Sources */,
 				2A217DCF24713B6F006BEFB5 /* UpdateList.swift in Sources */,
 				2A217DC9247034B0006BEFB5 /* MenuView.swift in Sources */,
+				2A217DD124714106006BEFB5 /* UpdateDetail.swift in Sources */,
 				2A217DCB2470D632006BEFB5 /* Home.swift in Sources */,
 				2A217DCD2470E9F3006BEFB5 /* HomeView.swift in Sources */,
 				2A217DB7246F8365006BEFB5 /* SceneDelegate.swift in Sources */,
