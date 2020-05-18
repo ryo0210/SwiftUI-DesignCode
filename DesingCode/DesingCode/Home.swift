@@ -11,14 +11,22 @@ import SwiftUI
 struct Home: View {
     @State var showProfile = false
     @State var viewState = CGSize.zero
+    @State var showContent = false
     
     var body: some View {
         ZStack {
             Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
                 .edgesIgnoringSafeArea(.all)
-            HomeView(showProfile: $showProfile)
-                //.padding(.top, 44)
-                .background(Color.white)
+            HomeView(showProfile: $showProfile, showContent: $showContent)
+                .padding(.top, 20)
+                .background(
+                    VStack {
+                        LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.8392156863, green: 0.8431372549, blue: 0.8901960784, alpha: 1)), Color.white]), startPoint: .top, endPoint: .bottom)
+                            .frame(height: 200)
+                        Spacer()
+                    }
+                    .background(Color.white)
+                )
                 
                 .clipShape(RoundedRectangle(cornerRadius: showProfile ? 30 : 0, style: .continuous))
                 //.clipShape(BottomCardView(bottom: 30))
@@ -48,6 +56,33 @@ struct Home: View {
                     self.viewState = .zero
                 }
             )
+            
+            if showContent {
+                Color.white.edgesIgnoringSafeArea(.all)
+                
+                ContentView()
+                
+                VStack {
+                    HStack {
+                        Spacer()
+                        Image(systemName: "xmark")
+                            .frame(width: 36, height: 36)
+                            .foregroundColor(.white)
+                            .background(Color.black)
+                            .clipShape(Circle())
+                    }
+                    .padding(.top, 16)
+                    .padding(.trailing, 16)
+                    
+                    Spacer()
+                }
+                .offset(x: -16, y: 16)
+                .transition(.move(edge: .top))
+                .animation(.spring(response: 0.6, dampingFraction: 0.8, blendDuration: 0))
+                .onTapGesture {
+                    self.showContent = false
+                }
+            }
         }
     }
 }
@@ -67,7 +102,7 @@ struct AvatarView: View {
                 .renderingMode(.original)
                 .resizable()
                 //.aspectRatio(contentMode: .fill)
-                .frame(width: 36, height: 36)
+                .frame(width: 38, height: 38)
                 .clipShape(Circle())
         }
     }
