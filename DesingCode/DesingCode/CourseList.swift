@@ -16,7 +16,8 @@ struct CourseList: View {
     
     var body: some View {
         ZStack {
-            Color.black.opacity(Double(self.activeView.height/500))                .animation(.linear)
+            Color.black.opacity(Double(self.activeView.height/500))
+                .animation(.linear)
                 .edgesIgnoringSafeArea(.all)
             
             ScrollView {
@@ -159,6 +160,12 @@ struct CourseView: View {
                    self.activeIndex = -1
                 }
             }
+            if show {
+//                CourseDetail(course: course, show: $show, active: $active, activeIndex: $activeIndex)
+//                    .background(Color.white)
+//                    .animation(nil)
+            }
+            
         }
         .frame(height: show ? screen.height : 280)
         .scaleEffect(1 - self.activeView.height / 1000)

@@ -24,6 +24,7 @@
 		2A217DDA247224EF006BEFB5 /* Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A217DD9247224EF006BEFB5 /* Modifier.swift */; };
 		2A217DDC24722C0D006BEFB5 /* Work_Sans in Resources */ = {isa = PBXBuildFile; fileRef = 2A217DDB24722C0D006BEFB5 /* Work_Sans */; };
 		2A217DDE2472A0DC006BEFB5 /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A217DDD2472A0DC006BEFB5 /* CourseList.swift */; };
+		2A7AEDE42472F43300921325 /* CourseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7AEDE32472F43300921325 /* CourseDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		2A217DD9247224EF006BEFB5 /* Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifier.swift; sourceTree = "<group>"; };
 		2A217DDB24722C0D006BEFB5 /* Work_Sans */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Work_Sans; sourceTree = "<group>"; };
 		2A217DDD2472A0DC006BEFB5 /* CourseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseList.swift; sourceTree = "<group>"; };
+		2A7AEDE32472F43300921325 /* CourseDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				2A217DCC2470E9F3006BEFB5 /* HomeView.swift */,
 				2A217DD424716AAB006BEFB5 /* TabBar.swift */,
 				2A217DDD2472A0DC006BEFB5 /* CourseList.swift */,
+				2A7AEDE32472F43300921325 /* CourseDetail.swift */,
 				2A217DD224715F25006BEFB5 /* UpdateStore.swift */,
 				2A217DCE24713B6F006BEFB5 /* UpdateList.swift */,
 				2A217DD024714106006BEFB5 /* UpdateDetail.swift */,
@@ -193,6 +196,7 @@
 				2A217DDA247224EF006BEFB5 /* Modifier.swift in Sources */,
 				2A217DB7246F8365006BEFB5 /* SceneDelegate.swift in Sources */,
 				2A217DB9246F8365006BEFB5 /* ContentView.swift in Sources */,
+				2A7AEDE42472F43300921325 /* CourseDetail.swift in Sources */,
 				2A217DD524716AAB006BEFB5 /* TabBar.swift in Sources */,
 				2A217DDE2472A0DC006BEFB5 /* CourseList.swift in Sources */,
 			);
