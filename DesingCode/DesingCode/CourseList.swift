@@ -23,7 +23,7 @@ struct CourseList: View {
             ScrollView {
                 VStack(spacing: 30) {
                     Text("Courses")
-                        .font(.system(.largeTitle)).bold()
+                        .font(.largeTitle).bold()
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.leading, 30)
                         .padding(.top, 30)
@@ -67,9 +67,9 @@ struct CourseList_Previews: PreviewProvider {
 struct CourseView: View {
     @Binding var show: Bool
     var course: Course
-    @Binding var active : Bool
-    var index : Int
-    @Binding var activeIndex : Int
+    @Binding var active: Bool
+    var index: Int
+    @Binding var activeIndex: Int
     @Binding var activeView: CGSize
     
     var body: some View {
@@ -155,29 +155,29 @@ struct CourseView: View {
                 self.show.toggle()
                 self.active.toggle()
                 if self.show {
-                   self.activeIndex = self.index
+                    self.activeIndex = self.index
                 } else {
-                   self.activeIndex = -1
+                    self.activeIndex = -1
                 }
             }
-            if show {
-//                CourseDetail(course: course, show: $show, active: $active, activeIndex: $activeIndex)
-//                    .background(Color.white)
-//                    .animation(nil)
-            }
             
+            if show {
+                CourseDetail(course: course, show: $show, active: $active, activeIndex: $activeIndex)
+                    .background(Color.white)
+                    .animation(nil)
+            }
         }
         .frame(height: show ? screen.height : 280)
         .scaleEffect(1 - self.activeView.height / 1000)
-        .rotation3DEffect(Angle(degrees: Double(self.activeView.height / 10)), axis: (x: 0, y: 10, z: 0))
+        .rotation3DEffect(Angle(degrees: Double(self.activeView.height / 10)), axis: (x: 0, y: 10.0, z: 0))
         .hueRotation(Angle(degrees: Double(self.activeView.height)))
         .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
         .gesture(
             show ?
             DragGesture()
                 .onChanged { value in
-                guard value.translation.height > 0 else { return }
                 guard value.translation.height < 300 else { return }
+                guard value.translation.height > 0 else { return }
                 self.activeView = value.translation
             }
             .onEnded { value in
@@ -195,17 +195,17 @@ struct CourseView: View {
 }
 
 struct Course: Identifiable {
-       var id = UUID()
-       var title: String
-       var subtitle: String
-       var image: UIImage
-       var logo: UIImage
-       var color: UIColor
-       var show: Bool
+    var id = UUID()
+    var title: String
+    var subtitle: String
+    var image: UIImage
+    var logo: UIImage
+    var color: UIColor
+    var show: Bool
 }
 
 var courseData = [
-   Course(title: "Prototype Designs in SwiftUI", subtitle: "18 Sections", image: #imageLiteral(resourceName: "Background1"), logo: #imageLiteral(resourceName: "Logo1"), color: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), show: false),
-   Course(title: "SwiftUI Advanced", subtitle: "20 Sections", image: #imageLiteral(resourceName: "Card3"), logo: #imageLiteral(resourceName: "Logo1"), color: #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1), show: false),
-   Course(title: "UI Design for Developers", subtitle: "20 Sections", image: #imageLiteral(resourceName: "Card4"), logo: #imageLiteral(resourceName: "Logo3"), color: #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), show: false)
+    Course(title: "Prototype Designs in SwiftUI", subtitle: "18 Sections", image: #imageLiteral(resourceName: "Background1"), logo: #imageLiteral(resourceName: "Logo1"), color: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), show: false),
+    Course(title: "SwiftUI Advanced", subtitle: "20 Sections", image: #imageLiteral(resourceName: "Card3"), logo: #imageLiteral(resourceName: "Logo1"), color: #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1), show: false),
+    Course(title: "UI Design for Developers", subtitle: "20 Sections", image: #imageLiteral(resourceName: "Card4"), logo: #imageLiteral(resourceName: "Logo3"), color: #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), show: false)
 ]
