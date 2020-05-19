@@ -27,6 +27,7 @@
 		2A7AEDE42472F43300921325 /* CourseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7AEDE32472F43300921325 /* CourseDetail.swift */; };
 		2A7AEDE62473BE9F00921325 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7AEDE52473BE9F00921325 /* Data.swift */; };
 		2A7AEDE82473C6D300921325 /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7AEDE72473C6D300921325 /* PostList.swift */; };
+		2A7AEDEA2473CB8E00921325 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7AEDE92473CB8E00921325 /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		2A7AEDE32472F43300921325 /* CourseDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetail.swift; sourceTree = "<group>"; };
 		2A7AEDE52473BE9F00921325 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		2A7AEDE72473C6D300921325 /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
+		2A7AEDE92473CB8E00921325 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				2A217DD72471795E006BEFB5 /* RingView.swift */,
 				2A217DD9247224EF006BEFB5 /* Modifier.swift */,
 				2A217DC8247034B0006BEFB5 /* MenuView.swift */,
+				2A7AEDE92473CB8E00921325 /* DataStore.swift */,
 				2A217DCA2470D632006BEFB5 /* Home.swift */,
 				2A217DCC2470E9F3006BEFB5 /* HomeView.swift */,
 				2A7AEDE52473BE9F00921325 /* Data.swift */,
@@ -193,6 +196,7 @@
 			files = (
 				2A217DB5246F8365006BEFB5 /* AppDelegate.swift in Sources */,
 				2A7AEDE62473BE9F00921325 /* Data.swift in Sources */,
+				2A7AEDEA2473CB8E00921325 /* DataStore.swift in Sources */,
 				2A217DD324715F25006BEFB5 /* UpdateStore.swift in Sources */,
 				2A217DCF24713B6F006BEFB5 /* UpdateList.swift in Sources */,
 				2A217DC9247034B0006BEFB5 /* MenuView.swift in Sources */,
