@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,8 @@
 		2A7AEDE62473BE9F00921325 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7AEDE52473BE9F00921325 /* Data.swift */; };
 		2A7AEDE82473C6D300921325 /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7AEDE72473C6D300921325 /* PostList.swift */; };
 		2A7AEDEA2473CB8E00921325 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7AEDE92473CB8E00921325 /* DataStore.swift */; };
+		2A7AEDED2473D04100921325 /* Contentful in Frameworks */ = {isa = PBXBuildFile; productRef = 2A7AEDEC2473D04100921325 /* Contentful */; };
+		2A7AEDEF2474C0AD00921325 /* CourseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7AEDEE2474C0AC00921325 /* CourseStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,7 @@
 		2A7AEDE52473BE9F00921325 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		2A7AEDE72473C6D300921325 /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
 		2A7AEDE92473CB8E00921325 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		2A7AEDEE2474C0AC00921325 /* CourseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A7AEDED2473D04100921325 /* Contentful in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,8 +103,9 @@
 				2A217DCC2470E9F3006BEFB5 /* HomeView.swift */,
 				2A7AEDE52473BE9F00921325 /* Data.swift */,
 				2A217DD424716AAB006BEFB5 /* TabBar.swift */,
-				2A217DDD2472A0DC006BEFB5 /* CourseList.swift */,
 				2A7AEDE72473C6D300921325 /* PostList.swift */,
+				2A217DDD2472A0DC006BEFB5 /* CourseList.swift */,
+				2A7AEDEE2474C0AC00921325 /* CourseStore.swift */,
 				2A7AEDE32472F43300921325 /* CourseDetail.swift */,
 				2A217DD224715F25006BEFB5 /* UpdateStore.swift */,
 				2A217DCE24713B6F006BEFB5 /* UpdateList.swift */,
@@ -138,6 +143,9 @@
 			dependencies = (
 			);
 			name = DesingCode;
+			packageProductDependencies = (
+				2A7AEDEC2473D04100921325 /* Contentful */,
+			);
 			productName = DesingCode;
 			productReference = 2A217DB1246F8365006BEFB5 /* DesingCode.app */;
 			productType = "com.apple.product-type.application";
@@ -166,6 +174,9 @@
 				Base,
 			);
 			mainGroup = 2A217DA8246F8365006BEFB5;
+			packageReferences = (
+				2A7AEDEB2473D04100921325 /* XCRemoteSwiftPackageReference "contentful.swift" */,
+			);
 			productRefGroup = 2A217DB2246F8365006BEFB5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -194,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A7AEDEF2474C0AD00921325 /* CourseStore.swift in Sources */,
 				2A217DB5246F8365006BEFB5 /* AppDelegate.swift in Sources */,
 				2A7AEDE62473BE9F00921325 /* Data.swift in Sources */,
 				2A7AEDEA2473CB8E00921325 /* DataStore.swift in Sources */,
@@ -408,6 +420,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2A7AEDEB2473D04100921325 /* XCRemoteSwiftPackageReference "contentful.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/contentful/contentful.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.11;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2A7AEDEC2473D04100921325 /* Contentful */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A7AEDEB2473D04100921325 /* XCRemoteSwiftPackageReference "contentful.swift" */;
+			productName = Contentful;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2A217DA9246F8365006BEFB5 /* Project object */;
 }
