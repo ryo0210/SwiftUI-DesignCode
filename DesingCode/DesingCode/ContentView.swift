@@ -208,7 +208,7 @@ struct BottomCardView: View {
                     .lineSpacing(4)
                 }
                 .padding(20)
-                .background(Color.white)
+                .background(Color("background3"))
                 .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
                 .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 10)
             }

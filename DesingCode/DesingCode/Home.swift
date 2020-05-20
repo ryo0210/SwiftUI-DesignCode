@@ -15,17 +15,17 @@ struct Home: View {
     
     var body: some View {
         ZStack {
-            Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
+            Color("background1")
                 .edgesIgnoringSafeArea(.all)
             HomeView(showProfile: $showProfile, showContent: $showContent)
                 .padding(.top, 20)
                 .background(
                     VStack {
-                        LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.8392156863, green: 0.8431372549, blue: 0.8901960784, alpha: 1)), Color.white]), startPoint: .top, endPoint: .bottom)
+                        LinearGradient(gradient: Gradient(colors: [Color("background2"), Color("background1")]), startPoint: .top, endPoint: .bottom)
                             .frame(height: 200)
                         Spacer()
                     }
-                    .background(Color.white)
+                    .background(Color("background1"))
                 )
                 
                 .clipShape(RoundedRectangle(cornerRadius: showProfile ? 30 : 0, style: .continuous))
@@ -58,8 +58,7 @@ struct Home: View {
             )
             
             if showContent {
-                Color.white.edgesIgnoringSafeArea(.all)
-                
+                BlurView(style: .systemMaterial).edgesIgnoringSafeArea(.all)
                 ContentView()
                 
                 VStack {
@@ -89,7 +88,8 @@ struct Home: View {
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
-        Home()
+        Home().environment(\.colorScheme, .dark)
+        .environment(\.sizeCategory, .extraLarge)
     }
 }
 
