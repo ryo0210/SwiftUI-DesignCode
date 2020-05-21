@@ -164,7 +164,7 @@ struct CourseView: View {
             
             if show {
                 CourseDetail(course: course, show: $show, active: $active, activeIndex: $activeIndex)
-                    .background(Color.white)
+                    //.background(Color.white)
                     .animation(nil)
             }
         }

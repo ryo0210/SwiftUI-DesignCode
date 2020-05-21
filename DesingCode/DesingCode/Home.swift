@@ -8,6 +8,14 @@
 
 import SwiftUI
 
+func haptic(type: UINotificationFeedbackGenerator.FeedbackType) {
+    UINotificationFeedbackGenerator().notificationOccurred(type)
+}
+
+func impact(style: UIImpactFeedbackGenerator.FeedbackStyle) {
+    UIImpactFeedbackGenerator(style: style).impactOccurred()
+}
+
 struct Home: View {
     @State var showProfile = false
     @State var viewState = CGSize.zero
@@ -80,6 +88,8 @@ struct Home: View {
                 .animation(.spring(response: 0.6, dampingFraction: 0.8, blendDuration: 0))
                 .onTapGesture {
                     self.showContent = false
+                    impact(style: .soft)
+                    
                 }
             }
         }
